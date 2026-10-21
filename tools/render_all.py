@@ -2,14 +2,14 @@
 import json, os, shutil, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DL = "/tmp/claude-0/-home-claude/12fbfc9f-0020-51b5-b84d-0a204c788b54/scratchpad/dl"
+DL = os.environ.get("SHORTS_IMG_DIR", os.path.join(HERE, "img"))
 only = set(sys.argv[1:])
 
-os.makedirs(os.path.join(HERE, "out"), exist_ok=True)
-for p in json.load(open(os.path.join(HERE, "products.json"))):
+OUT = os.path.join(os.path.dirname(HERE), "videos")
+for p in json.load(open(os.environ.get("SHORTS_SPEC", os.path.join(HERE, "products.json")))):
     if only and p["slug"] not in only:
         continue
-    work = os.path.join(HERE, "work", p["slug"])
+    work = os.path.join("/tmp/shorts-work", p["slug"])
     os.makedirs(work, exist_ok=True)
     for img in p["images"]:
         shutil.copy(os.path.join(DL, img), work)
@@ -20,7 +20,7 @@ for p in json.load(open(os.path.join(HERE, "products.json"))):
     json.dump(spec, open(os.path.join(work, "spec.json"), "w"))
     raw = os.path.join(work, "raw.mp4")
     subprocess.run([sys.executable, os.path.join(HERE, "make_short.py"), os.path.join(work, "spec.json"), raw], check=True)
-    out = os.path.join(HERE, "out", f"{p['date']}-{p['slug']}.mp4")
+    out = os.path.join(OUT, f"{p['date']}-{p['slug']}.mp4")
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", raw, "-c:v", "libx264", "-crf", "26",
                     "-preset", "slow", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "48k",
                     "-movflags", "+faststart", out], check=True)
