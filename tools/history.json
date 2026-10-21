@@ -82,5 +82,12 @@
   "hook": "Can standing still train your bones?",
   "fact": "Bone is living tissue that responds to mechanical signals",
   "price": ""
+ },
+ {
+  "date": "2026-10-21",
+  "slug": "theraface-mask",
+  "hook": "Salon-style light therapy, at home.",
+  "fact": "LED masks use red light and near-infrared light, each a different wavelength",
+  "price": ""
  }
 ]
