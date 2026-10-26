@@ -36,3 +36,21 @@ Known image URLs per product are recorded in images.json.
 6. Metricool createScheduledPost: providers youtube, youtubeData {type "short", privacy "public",
    madeForKids false, isAiGeneratedContent false, category HOWTO_STYLE, title, tags}, autoPublish true,
    draft false, publicationDate <date>T17:00:00 Australia/Sydney.
+7. Cross-post the same video (same Metricool/raw.githubusercontent media URL) as two more separate posts:
+   - Instagram Reel at 19:00: instagramData {type "REEL", showReelOnFeed true, isAiGenerated false}.
+     Caption = YouTube description with "#shorts" replaced by "#reels #mewellness".
+   - TikTok video at 20:00: tiktokData {privacyOption "PUBLIC_TO_EVERYONE", commercialContentOwnBrand true,
+     title = YouTube title without "#shorts", autoAddMusic false, isAigc false}.
+     Caption = YouTube description with "#shorts" replaced by "#mewellness #fyp".
+   Keep the "Always read the label..." line where the rules require it.
+
+## Daily health check
+Every run, before anything else: getScheduledPosts for yesterday through the next 7 days and look at every
+provider status. Any post in ERROR:
+- still in the future -> updateScheduledPost with identical content and date to re-queue it, then re-check;
+- already past -> move it to the next free day for that network at its usual time (IG feed 10:00, YouTube 17:00,
+  TikTok photo 18:00, IG Reel 19:00, TikTok video 20:00) with identical content;
+- if anything is still in ERROR afterwards, or the error says the account limit was reached, notify the user
+  with the exact error text.
+Also, if tomorrow already has a YouTube Short but no IG Reel/TikTok video of it, create those two from the
+Short's media URL (step 7).
