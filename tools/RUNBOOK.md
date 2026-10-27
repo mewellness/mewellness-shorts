@@ -42,15 +42,21 @@ Known image URLs per product are recorded in images.json.
    - TikTok video at 20:00: tiktokData {privacyOption "PUBLIC_TO_EVERYONE", commercialContentOwnBrand true,
      title = YouTube title without "#shorts", autoAddMusic false, isAigc false}.
      Caption = YouTube description with "#shorts" replaced by "#mewellness #fyp".
+   - Facebook Reel at 19:30: providers facebook, facebookData {type "REEL", title = YouTube title without "#shorts"}.
+     Caption = YouTube description with "#shorts" replaced by "#mewellness".
    Keep the "Always read the label..." line where the rules require it.
+8. Facebook feed post: for every day that has an Instagram feed post (10:00), make sure a Facebook post exists at
+   10:30 with the same images and caption: facebookData {type "POST"}, IG first-comment hashtags appended to the
+   caption, and Instagram-only wording removed ("link in bio" -> "at mewellness.com.au", drop "Swipe ..." lines).
+   Add the "Always read the label..." line where the rules require it, even if the IG caption lacks it.
 
 ## Daily health check
 Every run, before anything else: getScheduledPosts for yesterday through the next 7 days and look at every
 provider status. Any post in ERROR:
 - still in the future -> updateScheduledPost with identical content and date to re-queue it, then re-check;
-- already past -> move it to the next free day for that network at its usual time (IG feed 10:00, YouTube 17:00,
-  TikTok photo 18:00, IG Reel 19:00, TikTok video 20:00) with identical content;
+- already past -> move it to the next free day for that network at its usual time (IG feed 10:00, FB post 10:30, YouTube 17:00,
+  TikTok photo 18:00, IG Reel 19:00, FB Reel 19:30, TikTok video 20:00) with identical content;
 - if anything is still in ERROR afterwards, or the error says the account limit was reached, notify the user
   with the exact error text.
-Also, if tomorrow already has a YouTube Short but no IG Reel/TikTok video of it, create those two from the
-Short's media URL (step 7).
+Also, if tomorrow already has a YouTube Short but no IG Reel/TikTok video/FB Reel of it, create the missing ones
+from the Short's media URL (step 7), and if tomorrow's IG feed post has no FB post, create it (step 8).
