@@ -52,7 +52,7 @@
   "date": "2026-10-28",
   "slug": "thermapparel-rallywrap",
   "hook": "Why cool beats icy.",
-  "fact": "These PCM packs freeze at around 15\u00b0C, not 0\u00b0C like ice",
+  "fact": "These PCM packs freeze at around 15°C, not 0°C like ice",
   "price": "$785"
  },
  {
@@ -89,5 +89,12 @@
   "hook": "Salon-style light therapy, at home.",
   "fact": "LED masks use red light and near-infrared light, each a different wavelength",
   "price": ""
+ },
+ {
+  "date": "2026-11-05",
+  "slug": "oak-sleep-hub-2",
+  "hook": "Too hot for you, too cold for them?",
+  "fact": "Water holds about 4x more heat than the same weight of air",
+  "price": "$1,299"
  }
 ]
