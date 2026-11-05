@@ -96,5 +96,12 @@
   "hook": "Too hot for you, too cold for them?",
   "fact": "Water holds about 4x more heat than the same weight of air",
   "price": "$1,299"
+ },
+ {
+  "date": "2026-11-07",
+  "slug": "oxyrevo-quest36",
+  "hook": "How roomy is a 36 inch chamber?",
+  "fact": "36 inches is about 91 cm, close to the height of a kitchen bench",
+  "price": ""
  }
 ]
