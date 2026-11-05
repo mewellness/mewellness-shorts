@@ -1,0 +1,512 @@
+{{ 'airofit-design.css' | asset_url | stylesheet_tag }}
+
+<style>
+.af-feature-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.af-banner-img { width: 100%; border-radius: 20px; object-fit: cover; height: 280px; display: block; }
+.af-science-img { width: 100%; border-radius: 20px; object-fit: cover; max-height: 460px; display: block; margin: 40px auto 0; }
+@media (min-width: 768px) { .af-banner-img { height: 460px; } }
+.af-benefit-card__icon svg { width: 28px; height: 28px; stroke: var(--af-teal); stroke-width: 1.75; fill: none; }
+
+/* ---- HERO SLIDER (airofit.com style) ---- */
+.af-hero2 { position: relative; overflow: hidden; background: #0d0d0d; color: #fff; }
+.af-hero2__slides { display: grid; }
+.af-hero2__slide { grid-area: 1 / 1; position: relative; display: flex; align-items: center; min-height: 560px; opacity: 0; visibility: hidden; transition: opacity .7s ease, visibility 0s linear .7s; }
+.af-hero2__slide.is-active { opacity: 1; visibility: visible; transition: opacity .7s ease; z-index: 1; }
+.af-hero2__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.af-hero2__overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%); }
+.af-hero2__inner { position: relative; z-index: 1; width: 100%; padding-top: 72px; padding-bottom: 72px; }
+.af-hero2__content { max-width: 600px; }
+.af-hero2__cobrand { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.14); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.25); border-radius: 9999px; padding: 6px 14px; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; color: #fff; margin-bottom: 22px; }
+.af-hero2__cobrand-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--af-teal); }
+.af-page .af-hero2__title { font-size: clamp(38px, 5.6vw, 76px); font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -0.01em; line-height: 0.95; color: #fff; margin: 0 0 22px; text-wrap: balance; }
+.af-hero2__sub { font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.9); max-width: 520px; margin: 0 0 30px; }
+.af-hero2__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.af-hero2__btn { display: inline-flex; align-items: center; justify-content: center; min-width: 150px; padding: 14px 28px; border-radius: 9999px; font-family: var(--af-font); font-size: 15px; font-weight: 700; text-decoration: none; transition: background .2s, color .2s, border-color .2s; }
+.af-hero2__btn--solid { background: #fff; color: #111; border: 2px solid #fff; }
+.af-hero2__btn--solid:hover { background: var(--af-teal); border-color: var(--af-teal); color: #fff; }
+.af-hero2__btn--ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.85); }
+.af-hero2__btn--ghost:hover { background: #fff; color: #111; }
+.af-hero2__bottom { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 22px; padding-bottom: 26px; border-top: 1px solid rgba(255,255,255,0.15); background: #0d0d0d; }
+.af-hero2__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); flex: 1 1 420px; max-width: 640px; }
+.af-hero2__stat { padding-right: 12px; min-width: 0; }
+.af-hero2__stat + .af-hero2__stat { border-left: 1px solid rgba(255,255,255,0.25); padding-left: 16px; }
+.af-hero2__stat-val { font-size: clamp(20px, 2.6vw, 30px); font-weight: 900; font-style: italic; text-transform: uppercase; line-height: 1; color: #fff; }
+.af-hero2__stat-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-top: 6px; }
+.af-hero2__controls { display: flex; align-items: center; gap: 14px; }
+.af-hero2__arrow { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.6); background: transparent; color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s, color .2s; }
+.af-hero2__arrow:hover { background: #fff; color: #111; }
+.af-hero2__dots { display: flex; gap: 8px; }
+.af-hero2__dot { width: 9px; height: 9px; padding: 0; border-radius: 9999px; border: 0; background: rgba(255,255,255,0.45); cursor: pointer; transition: width .3s, background .3s; }
+.af-hero2__dot.is-active { width: 28px; background: #fff; }
+.af-hero2__arrow:focus-visible, .af-hero2__dot:focus-visible, .af-hero2__btn:focus-visible { outline: 2px solid var(--af-teal); outline-offset: 3px; }
+@media (min-width: 768px) {
+  .af-hero2__slide { min-height: 640px; }
+  .af-hero2__inner { padding-top: 96px; padding-bottom: 96px; }
+}
+@media (max-width: 767px) {
+  .af-hero2__slide { min-height: 520px; align-items: flex-end; }
+  .af-hero2__overlay { background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 70%); }
+  .af-hero2__inner { padding-top: 48px; padding-bottom: 40px; }
+  .af-hero2__sub { font-size: 15px; }
+  .af-hero2__btn { flex: 1 1 140px; }
+  .af-hero2__stat-label { font-size: 10px; letter-spacing: 0.08em; }
+  .af-hero2__controls { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .af-hero2__slide, .af-hero2__dot { transition: none; } }
+
+/* ---- MEWELLNESS CO-BRAND STRIP ---- */
+.af-cobrand { background: var(--af-teal-soft); border-bottom: 1px solid var(--af-border); padding: 22px 0; }
+.af-cobrand__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
+.af-cobrand__brand { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; white-space: nowrap; }
+.af-cobrand__x { color: var(--af-ink); }
+.af-cobrand__times { color: var(--af-muted); font-weight: 500; }
+.af-cobrand__mw { color: var(--af-teal-dark); }
+.af-cobrand__text { flex: 1 1 380px; margin: 0; font-size: 14px; line-height: 1.55; color: #2d3a35; }
+.af-cobrand__link { font-size: 13px; font-weight: 700; color: var(--af-teal-dark); text-decoration: none; white-space: nowrap; }
+.af-cobrand__link:hover { color: var(--af-ink); }
+</style>
+
+<div class="af-page">
+
+  {%- comment -%} ====== HERO SLIDER (matches airofit.com) ====== {%- endcomment -%}
+  <section class="af-hero2" id="af-hero-{{ section.id }}" aria-roledescription="carousel" aria-label="Featured">
+    <div class="af-hero2__slides">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          {%- capture slide_img -%}{{ block.settings.image | image_url: width: 2000 }}{%- endcapture -%}
+        {%- else -%}
+          {%- assign slide_img = block.settings.image_url -%}
+        {%- endif -%}
+        <div class="af-hero2__slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ section.blocks.size }}" {% unless forloop.first %}aria-hidden="true"{% endunless %} {{ block.shopify_attributes }}>
+          <img class="af-hero2__bg" src="{{ slide_img }}" alt="{{ block.settings.title | escape }}" {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %} style="object-position: {{ block.settings.focus | default: 'center' }};">
+          <div class="af-hero2__overlay"></div>
+          <div class="af-container af-hero2__inner">
+            <div class="af-hero2__content">
+              <span class="af-hero2__cobrand">
+                <span class="af-hero2__cobrand-dot"></span>
+                {{ section.settings.hero_badge | default: 'Airofit Australia · Run by MeWellness' }}
+              </span>
+              {%- if forloop.first -%}
+                <h1 class="af-hero2__title">{{ block.settings.title }}</h1>
+              {%- else -%}
+                <h2 class="af-hero2__title">{{ block.settings.title }}</h2>
+              {%- endif -%}
+              <p class="af-hero2__sub">{{ block.settings.subtitle }}</p>
+              <div class="af-hero2__ctas">
+                {%- if block.settings.cta_primary != blank -%}
+                  <a href="{{ block.settings.cta_primary_link | default: '/collections/all' }}" class="af-hero2__btn af-hero2__btn--solid" {% unless forloop.first %}tabindex="-1"{% endunless %}>{{ block.settings.cta_primary }}</a>
+                {%- endif -%}
+                {%- if block.settings.cta_secondary != blank -%}
+                  <a href="{{ block.settings.cta_secondary_link | default: '#af-science' }}" class="af-hero2__btn af-hero2__btn--ghost" {% unless forloop.first %}tabindex="-1"{% endunless %}>{{ block.settings.cta_secondary }}</a>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="af-container af-hero2__bottom">
+      <div class="af-hero2__stats">
+        <div class="af-hero2__stat"><div class="af-hero2__stat-val">30%</div><div class="af-hero2__stat-label">In lung capacity</div></div>
+        <div class="af-hero2__stat"><div class="af-hero2__stat-val">3–4 Weeks</div><div class="af-hero2__stat-label">Time to results</div></div>
+        <div class="af-hero2__stat"><div class="af-hero2__stat-val">5 Min</div><div class="af-hero2__stat-label">Training per day</div></div>
+      </div>
+      {%- if section.blocks.size > 1 -%}
+      <div class="af-hero2__controls">
+        <button type="button" class="af-hero2__arrow" data-dir="-1" aria-label="Previous slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="af-hero2__dots">
+          {%- for block in section.blocks -%}
+            <button type="button" class="af-hero2__dot{% if forloop.first %} is-active{% endif %}" data-index="{{ forloop.index0 }}" aria-label="Go to slide {{ forloop.index }}"></button>
+          {%- endfor -%}
+        </div>
+        <button type="button" class="af-hero2__arrow" data-dir="1" aria-label="Next slide">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+      {%- endif -%}
+    </div>
+  </section>
+
+  <script>
+  (function () {
+    var root = document.getElementById('af-hero-{{ section.id }}');
+    if (!root) return;
+    var slides = root.querySelectorAll('.af-hero2__slide');
+    var dots = root.querySelectorAll('.af-hero2__dot');
+    if (slides.length < 2) return;
+    var i = 0, timer = null, delay = {{ section.settings.autoplay_seconds | default: 6 | times: 1000 }};
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function go(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) {
+        var on = k === i;
+        s.classList.toggle('is-active', on);
+        if (on) { s.removeAttribute('aria-hidden'); } else { s.setAttribute('aria-hidden', 'true'); }
+        s.querySelectorAll('a').forEach(function (a) { if (on) { a.removeAttribute('tabindex'); } else { a.setAttribute('tabindex', '-1'); } });
+        var img = s.querySelector('img');
+        if (on && img && img.loading === 'lazy') img.loading = 'eager';
+      });
+      dots.forEach(function (d, k) { d.classList.toggle('is-active', k === i); });
+    }
+    function start() { if (!reduce && {{ section.settings.autoplay | json }}) { stop(); timer = setInterval(function () { go(i + 1); }, delay); } }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    root.querySelectorAll('.af-hero2__arrow').forEach(function (b) { b.addEventListener('click', function () { go(i + Number(b.dataset.dir)); start(); }); });
+    dots.forEach(function (d) { d.addEventListener('click', function () { go(Number(d.dataset.index)); start(); }); });
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    var x0 = null;
+    root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+      x0 = null; start();
+    });
+    document.addEventListener('shopify:block:select', function (e) {
+      var idx = Array.prototype.indexOf.call(slides, e.target);
+      if (idx > -1) { stop(); go(idx); }
+    });
+    start();
+  })();
+  </script>
+
+  {%- comment -%} ====== MEWELLNESS CO-BRAND STRIP ====== {%- endcomment -%}
+  <section class="af-cobrand">
+    <div class="af-container af-cobrand__inner">
+      <div class="af-cobrand__brand">
+        <span class="af-cobrand__x">Airofit</span>
+        <span class="af-cobrand__times">&times;</span>
+        <span class="af-cobrand__mw">MeWellness</span>
+      </div>
+      <p class="af-cobrand__text">
+        <strong>Airofit Australia is a MeWellness store</strong> — owned and run by MeWellness Pty Ltd, a Sydney-based wellness business (ABN 92 687 950 670). Local stock, local support, and Australian Consumer Law protection on every order.
+      </p>
+      <a class="af-cobrand__link" href="https://www.mewellness.com.au" target="_blank" rel="noopener">Visit MeWellness →</a>
+    </div>
+  </section>
+
+  {%- comment -%} ====== TRUST BAR ====== {%- endcomment -%}
+  <section class="af-trust">
+    <div class="af-container">
+      <div class="af-trust__grid">
+        <div class="af-trust__item">
+          <svg class="af-trust__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div>
+            <div class="af-trust__title">Tracked AU delivery</div>
+            <div class="af-trust__sub">Shipping to every state</div>
+          </div>
+        </div>
+        <div class="af-trust__item">
+          <svg class="af-trust__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+          <div>
+            <div class="af-trust__title">30-day returns</div>
+            <div class="af-trust__sub">No questions asked</div>
+          </div>
+        </div>
+        <div class="af-trust__item">
+          <svg class="af-trust__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <div>
+            <div class="af-trust__title">2-year warranty</div>
+            <div class="af-trust__sub">On all devices</div>
+          </div>
+        </div>
+        <div class="af-trust__item">
+          <svg class="af-trust__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          <div>
+            <div class="af-trust__title">AU-based support</div>
+            <div class="af-trust__sub">MeWellness team, Sydney</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ====== FULL-WIDTH BANNER ====== {%- endcomment -%}
+  <section style="padding:48px 0 0;">
+    <div class="af-container">
+      <img
+        class="af-banner-img"
+        src="https://airofit.com/cdn/shop/files/1_6c8cb071-f658-4603-ad99-131233212dc0_2000x.png?v=1750825596"
+        alt="Airofit breathing trainer Australia"
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+  {%- comment -%} ====== PRODUCTS ====== {%- endcomment -%}
+  <section class="af-products">
+    <div class="af-container">
+      <div class="af-section-header">
+        <div>
+          <h2 class="af-section-title">Shop Airofit Breathing Trainers</h2>
+          <p class="af-section-sub">Two breathing trainers, one goal: stronger breathing muscles in about 10 minutes a day.</p>
+        </div>
+        <a href="/collections/breathing-trainers" class="af-section-link">Compare ELITE and CORE →</a>
+      </div>
+      <div class="af-product-grid">
+        {%- for product in collections['breathing-trainers'].products limit: 3 -%}
+          <a href="{{ product.url }}" class="af-product-card">
+            <div class="af-product-card__img">
+              {%- if product.featured_image -%}
+                <img src="{{ product.featured_image | img_url: '600x600' }}" alt="{{ product.title | escape }}" loading="lazy">
+              {%- else -%}
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(17,17,17,0.3)" stroke-width="1.25"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              {%- endif -%}
+              {%- if product.tags contains 'best-seller' -%}
+                <span class="af-product-card__badge">Best Seller</span>
+              {%- endif -%}
+            </div>
+            <div class="af-product-card__body">
+              <div class="af-product-card__cat">{{ product.type }}</div>
+              <div class="af-product-card__name">{{ product.title }}</div>
+              <div class="af-product-card__desc">{{ product.description | strip_html | truncate: 100 }}</div>
+              <div class="af-product-card__footer">
+                <span class="af-product-card__price">{{ product.price | money }}</span>
+                <span class="af-product-card__cta">Add to cart</span>
+              </div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ====== FEATURE ROWS WITH REAL IMAGES ====== {%- endcomment -%}
+  <section class="af-features">
+    <div class="af-container">
+
+      <div class="af-feature-row">
+        <div class="af-feature-row__visual" style="padding:0;overflow:hidden;">
+          <img class="af-feature-img" src="https://airofit.com/cdn/shop/files/DSC08357.jpg?v=1757942582" alt="Airofit breathing trainer app-guided session" loading="lazy">
+        </div>
+        <div>
+          <div class="af-feature-row__eyebrow">App-guided</div>
+          <h3 class="af-feature-row__title">Personalised breathing training, every session.</h3>
+          <p class="af-feature-row__body">The free Airofit app builds a program around your goals and adjusts the resistance as your breathing muscles get stronger. Most sessions take about 10 minutes, at home or before training.</p>
+        </div>
+      </div>
+
+      <div class="af-feature-row af-feature-row--reverse">
+        <div class="af-feature-row__visual" style="padding:0;overflow:hidden;">
+          <img class="af-feature-img" src="https://airofit.com/cdn/shop/files/charging_419e930c-2a72-4422-a4e6-7ded745af368.jpg?v=1760434362" alt="Airofit ELITE smart breathing trainer" loading="lazy">
+        </div>
+        <div>
+          <div class="af-feature-row__eyebrow">Airofit ELITE</div>
+          <h3 class="af-feature-row__title">Live feedback and lung function tests.</h3>
+          <p class="af-feature-row__body">ELITE is the smart lung trainer in the range. It connects to the app for real-time feedback, built-in lung function testing and fully personalised plans, so you can see your progress week by week. <a href="/products/airofit-elite">Shop Airofit ELITE</a>.</p>
+        </div>
+      </div>
+
+      <div class="af-feature-row">
+        <div class="af-feature-row__visual" style="padding:0;overflow:hidden;">
+          <img class="af-feature-img" src="https://airofit.com/cdn/shop/files/Cycling_ef063338-5795-4167-881f-6be0c9cbacfb.jpg?v=1761292308" alt="Airofit CORE lung trainer for cyclists and runners" loading="lazy">
+        </div>
+        <div>
+          <div class="af-feature-row__eyebrow">Airofit CORE</div>
+          <h3 class="af-feature-row__title">No charging. No Bluetooth.</h3>
+          <p class="af-feature-row__body">CORE is the simple breathing trainer: set the resistance by hand and follow the app-guided programs, wherever you train. You can upgrade to ELITE later. <a href="/products/airofit-core">Shop Airofit CORE</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {%- comment -%} ====== BENEFITS WITH PROPER ICONS ====== {%- endcomment -%}
+  <section class="af-benefits">
+    <div class="af-container">
+      <div class="af-section-header">
+        <div>
+          <h2 class="af-section-title">Find Your Training Focus.</h2>
+          <p class="af-section-sub">Six ways Australians use an Airofit breathing trainer.</p>
+        </div>
+      </div>
+      <div class="af-benefits-grid">
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="6" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h3"/><path d="M3 14l3-3 3 3"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Cycling</div>
+          <div class="af-benefit-card__sub">Build VO2 max and sustain power on the bike.</div>
+        </div>
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="13" cy="4" r="1"/><path d="M7 21l3-7-2-2 3-5"/><path d="m17 21-3.5-4.5 1.5-3.5-3-2.5"/><path d="M6 12h3l2.5-4.5"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Running</div>
+          <div class="af-benefit-card__sub">Breathe stronger on every km, sprint and hill.</div>
+        </div>
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M2 17c1.5 0 3-1 4.5-1s3 1 4.5 1 3-1 4.5-1 3 1 4.5 1"/><path d="M2 7c1.5 0 3 1 4.5 1s3-1 4.5-1 3 1 4.5 1 3-1 4.5-1"/><circle cx="19" cy="5" r="1"/><path d="M19 6v6"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Swimming</div>
+          <div class="af-benefit-card__sub">Maximise breath control and stroke efficiency.</div>
+        </div>
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 5v14"/><path d="M18 5v14"/><path d="M2 9h4"/><path d="M2 15h4"/><path d="M18 9h4"/><path d="M18 15h4"/><path d="M6 9h12"/><path d="M6 15h12"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Fitness</div>
+          <div class="af-benefit-card__sub">Train harder, recover faster between sets.</div>
+        </div>
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Sleep</div>
+          <div class="af-benefit-card__sub">Calmer breathing for deeper, restorative sleep.</div>
+        </div>
+
+        <div class="af-benefit-card">
+          <div class="af-benefit-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="af-benefit-card__title">Stress &amp; Anxiety</div>
+          <div class="af-benefit-card__sub">Activate your nervous system's calm response.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ====== SCIENCE ====== {%- endcomment -%}
+  <section class="af-science" id="af-science">
+    <div class="af-container">
+      <div class="af-science__eyebrow">The Science</div>
+      <h2 class="af-science__title">Backed by research. Built for Aussies.</h2>
+      <p class="af-science__sub">Airofit's methodology is grounded in peer-reviewed studies on respiratory muscle training — trusted by 180,000+ athletes worldwide.</p>
+      <div class="af-science-stats">
+        <div class="af-science-stat">
+          <div class="af-science-stat__val">+40%</div>
+          <div class="af-science-stat__label">stronger breathing muscles after 4 weeks</div>
+        </div>
+        <div class="af-science-stat">
+          <div class="af-science-stat__val">20+</div>
+          <div class="af-science-stat__label">peer-reviewed studies</div>
+        </div>
+        <div class="af-science-stat">
+          <div class="af-science-stat__val">10 min</div>
+          <div class="af-science-stat__label">per day, all you need</div>
+        </div>
+      </div>
+      <img
+        class="af-science-img"
+        src="https://cdn.shopify.com/s/files/1/0082/8309/5117/files/24_826474d4-bcad-4d15-bda3-610467ce2f9c.jpg?v=1777579182&width=1400"
+        alt="Airofit science — backed by research, built for Australians"
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+  {%- comment -%} ====== ACCESSORIES ====== {%- endcomment -%}
+  <section class="af-products">
+    <div class="af-container">
+      <div class="af-section-header">
+        <div>
+          <h2 class="af-section-title">Accessories</h2>
+          <p class="af-section-sub">Make the most of your kit.</p>
+        </div>
+        <a href="/collections/accessories" class="af-section-link">Shop accessories →</a>
+      </div>
+      <div class="af-product-grid">
+        {%- for product in collections['accessories'].products limit: 3 -%}
+          <a href="{{ product.url }}" class="af-product-card">
+            <div class="af-product-card__img">
+              {%- if product.featured_image -%}
+                <img src="{{ product.featured_image | img_url: '600x600' }}" alt="{{ product.title | escape }}" loading="lazy">
+              {%- else -%}
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(17,17,17,0.3)" stroke-width="1.25"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              {%- endif -%}
+            </div>
+            <div class="af-product-card__body">
+              <div class="af-product-card__cat">{{ product.type }}</div>
+              <div class="af-product-card__name">{{ product.title }}</div>
+              <div class="af-product-card__desc">{{ product.description | strip_html | truncate: 100 }}</div>
+              <div class="af-product-card__footer">
+                <span class="af-product-card__price">{{ product.price | money }}</span>
+                <span class="af-product-card__cta">Add to cart</span>
+              </div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ====== FAQs + CONTACT ====== {%- endcomment -%}
+  <section class="af-faqs" id="af-faqs">
+    <div class="af-container">
+      <div class="af-faqs__grid">
+        <div>
+          <h2 class="af-section-title">Questions?</h2>
+          <p class="af-section-sub" style="margin-top:12px">Everything you need to know before you start. Our MeWellness team in Sydney is here to help.</p>
+          <div style="margin-top:24px;display:flex;flex-direction:column;gap:12px;">
+            <a href="tel:0470645648" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--af-ink);text-decoration:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--af-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.64a16 16 0 0 0 5.45 5.45l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Us: 0470 645 648
+            </a>
+            <a href="mailto:sales@mewellness.com.au" style="display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--af-ink);text-decoration:none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--af-teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Us: sales@mewellness.com.au
+            </a>
+          </div>
+        </div>
+        <div>
+          {%- assign faqs = 'How long until I see results?|Is Airofit safe for asthma or COPD?|Do I need the app to use the device?|How does the 30-day money-back guarantee work?' | split: '|' -%}
+          {%- for faq in faqs -%}
+            <div class="af-faq-item">
+              <svg class="af-faq-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="af-faq-q">{{ faq }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Airofit Homepage",
+  "tag": "section",
+  "settings": [
+    { "type": "header", "content": "Hero slider" },
+    { "type": "text", "id": "hero_badge", "label": "Badge text (all slides)", "default": "Airofit Australia · Run by MeWellness" },
+    { "type": "checkbox", "id": "autoplay", "label": "Auto-rotate slides", "default": true },
+    { "type": "range", "id": "autoplay_seconds", "label": "Seconds per slide", "min": 3, "max": 12, "step": 1, "unit": "s", "default": 6 }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Hero slide",
+      "limit": 6,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Background image" },
+        { "type": "text", "id": "image_url", "label": "Or background image URL", "info": "Used when no image is picked above." },
+        { "type": "select", "id": "focus", "label": "Image focus", "default": "center", "options": [
+          { "value": "left center", "label": "Left" },
+          { "value": "center", "label": "Centre" },
+          { "value": "right center", "label": "Right" }
+        ] },
+        { "type": "text", "id": "title", "label": "Headline", "default": "Train the muscles most ignore" },
+        { "type": "textarea", "id": "subtitle", "label": "Subheading" },
+        { "type": "text", "id": "cta_primary", "label": "Primary button text", "default": "Shop now" },
+        { "type": "url", "id": "cta_primary_link", "label": "Primary button link" },
+        { "type": "text", "id": "cta_secondary", "label": "Secondary button text", "default": "Learn more" },
+        { "type": "url", "id": "cta_secondary_link", "label": "Secondary button link" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Airofit Homepage" }]
+}
+{% endschema %}

@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "airofit-homepage": {
+      "type": "airofit-homepage",
+      "blocks": {
+        "slide_main": {
+          "type": "slide",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0742/3170/9789/files/DSC08357_b69e823b-edcc-4c1e-8bb7-ba10d3f90862.jpg?v=1782183829&width=2000",
+            "focus": "right center",
+            "title": "Airofit Breathing Trainer",
+            "subtitle": "Train the muscles most ignore. Airofit is an app-guided breathing and lung trainer that strengthens your breathing muscles in about 10 minutes a day, for sport and everyday wellbeing.",
+            "cta_primary": "Shop breathing trainers",
+            "cta_primary_link": "/collections/breathing-trainers",
+            "cta_secondary": "What is Airofit?",
+            "cta_secondary_link": "#af-science"
+          }
+        },
+        "slide_olympian": {
+          "type": "slide",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0742/3170/9789/files/DSC08106_2_ce674bfc-d3f9-4e44-b73d-18e03ec92c2a.jpg?v=1782183827&width=2000",
+            "focus": "center",
+            "title": "Breathe like an Olympian",
+            "subtitle": "Elite and Olympic athletes use Airofit to build breathing strength, hold their pace for longer and recover faster between efforts. Now you can train the same way at home.",
+            "cta_primary": "Shop now",
+            "cta_primary_link": "/collections/breathing-trainers",
+            "cta_secondary": "See the science",
+            "cta_secondary_link": "/pages/science"
+          }
+        },
+        "slide_everyday": {
+          "type": "slide",
+          "settings": {
+            "image_url": "https://cdn.shopify.com/s/files/1/0742/3170/9789/files/DSC07771_1_2_1ae92c2f-a8f7-4775-8cf0-3ec33b00985e.jpg?v=1782183827&width=2000",
+            "focus": "center",
+            "title": "Elevate your everyday",
+            "subtitle": "Five minutes of guided breath training a day strengthens the muscles you breathe with, for calmer focus, better sleep and easier breathing through the day.",
+            "cta_primary": "Shop now",
+            "cta_primary_link": "/collections/breathing-trainers",
+            "cta_secondary": "Read the FAQs",
+            "cta_secondary_link": "/pages/faqs"
+          }
+        }
+      },
+      "block_order": ["slide_main", "slide_olympian", "slide_everyday"],
+      "settings": {
+        "hero_badge": "Airofit Australia · Run by MeWellness",
+        "autoplay": true,
+        "autoplay_seconds": 6
+      }
+    }
+  },
+  "order": ["airofit-homepage"]
+}
