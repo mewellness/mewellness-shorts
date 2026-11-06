@@ -103,5 +103,12 @@
   "hook": "How roomy is a 36 inch chamber?",
   "fact": "36 inches is about 91 cm, close to the height of a kitchen bench",
   "price": ""
+ },
+ {
+  "date": "2026-11-08",
+  "slug": "theraface-mask",
+  "hook": "Light, without the heat.",
+  "fact": "LEDs turn far more of their energy into light than old-style bulbs, so they run cool",
+  "price": ""
  }
 ]
