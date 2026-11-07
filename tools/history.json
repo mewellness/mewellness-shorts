@@ -110,5 +110,12 @@
   "hook": "Light, without the heat.",
   "fact": "LEDs turn far more of their energy into light than old-style bulbs, so they run cool",
   "price": ""
+ },
+ {
+  "date": "2026-11-09",
+  "slug": "oxyrevo-apex36",
+  "hook": "5 metres underwater. In your living room.",
+  "fact": "1.5 ATA is about the pressure you'd feel 5 metres under the sea",
+  "price": ""
  }
 ]
