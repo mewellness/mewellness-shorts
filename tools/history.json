@@ -117,5 +117,19 @@
   "hook": "5 metres underwater. In your living room.",
   "fact": "1.5 ATA is about the pressure you'd feel 5 metres under the sea",
   "price": ""
+ },
+ {
+  "date": "2026-11-10",
+  "slug": "neuradiant-1070",
+  "hook": "Light your eyes can't see.",
+  "fact": "Human eyes see light from about 400 to 700nm; 1070nm sits well beyond red",
+  "price": ""
+ },
+ {
+  "date": "2026-11-11",
+  "slug": "therabody-jetboots-pro-plus",
+  "hook": "No hoses. No pump box.",
+  "fact": "Most compression boots run off a separate pump box, connected by air hoses",
+  "price": "$1,499"
  }
 ]
