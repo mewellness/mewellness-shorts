@@ -131,5 +131,12 @@
   "hook": "No hoses. No pump box.",
   "fact": "Most compression boots run off a separate pump box, connected by air hoses",
   "price": "$1,499"
+ },
+ {
+  "date": "2026-11-13",
+  "slug": "theragun-pro-plus",
+  "hook": "It's not just speed. It's stroke.",
+  "fact": "Amplitude is how far a massage gun's head travels with every pulse",
+  "price": "$949"
  }
 ]
