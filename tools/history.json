@@ -1,149 +1,156 @@
 [
-  {
-    "date": "2026-10-21",
-    "slug": "oak-sleep-hub-2",
-    "hook": "Hot sleeper? Summer is coming.",
-    "fact": "Keeps your bed at the temperature you choose",
-    "price": "$1,299"
-  },
-  {
-    "date": "2026-10-22",
-    "slug": "oxyrevo-apex36",
-    "hook": "What does 1.5 ATA actually mean?",
-    "fact": "At 1.5 ATA, the air around you is at 50% more pressure than at sea level",
-    "price": ""
-  },
-  {
-    "date": "2026-10-23",
-    "slug": "therabody-jetboots-pro-plus",
-    "hook": "Your legs have a second heart.",
-    "fact": "Your calf muscles squeeze to push blood back up towards your heart",
-    "price": "$1,499"
-  },
-  {
-    "date": "2026-10-24",
-    "slug": "neuradiant-1070",
-    "hook": "Why 1070nm light?",
-    "fact": "Near-infrared light at 1070nm travels deeper than the red light most devices use",
-    "price": ""
-  },
-  {
-    "date": "2026-11-02",
-    "slug": "powerbreathe-k4",
-    "hook": "Ever trained your breathing muscles?",
-    "fact": "Your diaphragm is a muscle, and like any muscle it responds to resistance training",
-    "price": "$1,127.50"
-  },
-  {
-    "date": "2026-11-03",
-    "slug": "oska-pulse",
-    "hook": "You won't feel it. That's the point.",
-    "fact": "PEMF sends gentle electromagnetic pulses into the area a device sits on",
-    "price": "$1,395"
-  },
-  {
-    "date": "2026-10-27",
-    "slug": "theragun-pro-plus",
-    "hook": "Tight spots holding you back?",
-    "fact": "Percussive therapy delivers rapid, targeted pulses deep into muscle",
-    "price": "$949"
-  },
-  {
-    "date": "2026-10-28",
-    "slug": "thermapparel-rallywrap",
-    "hook": "Why cool beats icy.",
-    "fact": "These PCM packs freeze at around 15°C, not 0°C like ice",
-    "price": "$785"
-  },
-  {
-    "date": "2026-10-29",
-    "slug": "neuronic-light",
-    "hook": "Light, but make it wearable.",
-    "fact": "Photobiomodulation is the science of how light interacts with your cells",
-    "price": ""
-  },
-  {
-    "date": "2026-10-30",
-    "slug": "oxyrevo-quest30",
-    "hook": "Adding hyperbaric to your clinic?",
-    "fact": "A rigid hard shell means no inflating and no sagging between clients",
-    "price": ""
-  },
-  {
-    "date": "2026-10-31",
-    "slug": "rapid-release-pro3",
-    "hook": "Built for clinics.",
-    "fact": "High-frequency vibration works soft tissue without the pounding of a massage gun",
-    "price": ""
-  },
-  {
-    "date": "2026-11-01",
-    "slug": "marodyne-liv",
-    "hook": "Can standing still train your bones?",
-    "fact": "Bone is living tissue that responds to mechanical signals",
-    "price": ""
-  },
-  {
-    "date": "2026-10-21",
-    "slug": "theraface-mask",
-    "hook": "Salon-style light therapy, at home.",
-    "fact": "LED masks use red light and near-infrared light, each a different wavelength",
-    "price": ""
-  },
-  {
-    "date": "2026-11-05",
-    "slug": "oak-sleep-hub-2",
-    "hook": "Too hot for you, too cold for them?",
-    "fact": "Water holds about 4x more heat than the same weight of air",
-    "price": "$1,299"
-  },
-  {
-    "date": "2026-11-07",
-    "slug": "oxyrevo-quest36",
-    "hook": "How roomy is a 36 inch chamber?",
-    "fact": "36 inches is about 91 cm, close to the height of a kitchen bench",
-    "price": ""
-  },
-  {
-    "date": "2026-11-08",
-    "slug": "theraface-mask",
-    "hook": "Light, without the heat.",
-    "fact": "LEDs turn far more of their energy into light than old-style bulbs, so they run cool",
-    "price": ""
-  },
-  {
-    "date": "2026-11-09",
-    "slug": "oxyrevo-apex36",
-    "hook": "5 metres underwater. In your living room.",
-    "fact": "1.5 ATA is about the pressure you'd feel 5 metres under the sea",
-    "price": ""
-  },
-  {
-    "date": "2026-11-10",
-    "slug": "neuradiant-1070",
-    "hook": "Light your eyes can't see.",
-    "fact": "Human eyes see light from about 400 to 700nm; 1070nm sits well beyond red",
-    "price": ""
-  },
-  {
-    "date": "2026-11-11",
-    "slug": "therabody-jetboots-pro-plus",
-    "hook": "No hoses. No pump box.",
-    "fact": "Most compression boots run off a separate pump box, connected by air hoses",
-    "price": "$1,499"
-  },
-  {
-    "date": "2026-11-13",
-    "slug": "theragun-pro-plus",
-    "hook": "It's not just speed. It's stroke.",
-    "fact": "Amplitude is how far a massage gun's head travels with every pulse",
-    "price": "$949"
-  },
-  {
-    "date": "2026-11-14",
-    "slug": "rapid-release-pro3",
-    "hook": "Who looks after the therapist's hands?",
-    "fact": "Hands-on soft tissue work puts repeated load through a therapist's hands and wrists",
-    "price": ""
-  }
+ {
+  "date": "2026-10-21",
+  "slug": "oak-sleep-hub-2",
+  "hook": "Hot sleeper? Summer is coming.",
+  "fact": "Keeps your bed at the temperature you choose",
+  "price": "$1,299"
+ },
+ {
+  "date": "2026-10-22",
+  "slug": "oxyrevo-apex36",
+  "hook": "What does 1.5 ATA actually mean?",
+  "fact": "At 1.5 ATA, the air around you is at 50% more pressure than at sea level",
+  "price": ""
+ },
+ {
+  "date": "2026-10-23",
+  "slug": "therabody-jetboots-pro-plus",
+  "hook": "Your legs have a second heart.",
+  "fact": "Your calf muscles squeeze to push blood back up towards your heart",
+  "price": "$1,499"
+ },
+ {
+  "date": "2026-10-24",
+  "slug": "neuradiant-1070",
+  "hook": "Why 1070nm light?",
+  "fact": "Near-infrared light at 1070nm travels deeper than the red light most devices use",
+  "price": ""
+ },
+ {
+  "date": "2026-11-02",
+  "slug": "powerbreathe-k4",
+  "hook": "Ever trained your breathing muscles?",
+  "fact": "Your diaphragm is a muscle, and like any muscle it responds to resistance training",
+  "price": "$1,127.50"
+ },
+ {
+  "date": "2026-11-03",
+  "slug": "oska-pulse",
+  "hook": "You won't feel it. That's the point.",
+  "fact": "PEMF sends gentle electromagnetic pulses into the area a device sits on",
+  "price": "$1,395"
+ },
+ {
+  "date": "2026-10-27",
+  "slug": "theragun-pro-plus",
+  "hook": "Tight spots holding you back?",
+  "fact": "Percussive therapy delivers rapid, targeted pulses deep into muscle",
+  "price": "$949"
+ },
+ {
+  "date": "2026-10-28",
+  "slug": "thermapparel-rallywrap",
+  "hook": "Why cool beats icy.",
+  "fact": "These PCM packs freeze at around 15°C, not 0°C like ice",
+  "price": "$785"
+ },
+ {
+  "date": "2026-10-29",
+  "slug": "neuronic-light",
+  "hook": "Light, but make it wearable.",
+  "fact": "Photobiomodulation is the science of how light interacts with your cells",
+  "price": ""
+ },
+ {
+  "date": "2026-10-30",
+  "slug": "oxyrevo-quest30",
+  "hook": "Adding hyperbaric to your clinic?",
+  "fact": "A rigid hard shell means no inflating and no sagging between clients",
+  "price": ""
+ },
+ {
+  "date": "2026-10-31",
+  "slug": "rapid-release-pro3",
+  "hook": "Built for clinics.",
+  "fact": "High-frequency vibration works soft tissue without the pounding of a massage gun",
+  "price": ""
+ },
+ {
+  "date": "2026-11-01",
+  "slug": "marodyne-liv",
+  "hook": "Can standing still train your bones?",
+  "fact": "Bone is living tissue that responds to mechanical signals",
+  "price": ""
+ },
+ {
+  "date": "2026-10-21",
+  "slug": "theraface-mask",
+  "hook": "Salon-style light therapy, at home.",
+  "fact": "LED masks use red light and near-infrared light, each a different wavelength",
+  "price": ""
+ },
+ {
+  "date": "2026-11-05",
+  "slug": "oak-sleep-hub-2",
+  "hook": "Too hot for you, too cold for them?",
+  "fact": "Water holds about 4x more heat than the same weight of air",
+  "price": "$1,299"
+ },
+ {
+  "date": "2026-11-07",
+  "slug": "oxyrevo-quest36",
+  "hook": "How roomy is a 36 inch chamber?",
+  "fact": "36 inches is about 91 cm, close to the height of a kitchen bench",
+  "price": ""
+ },
+ {
+  "date": "2026-11-08",
+  "slug": "theraface-mask",
+  "hook": "Light, without the heat.",
+  "fact": "LEDs turn far more of their energy into light than old-style bulbs, so they run cool",
+  "price": ""
+ },
+ {
+  "date": "2026-11-09",
+  "slug": "oxyrevo-apex36",
+  "hook": "5 metres underwater. In your living room.",
+  "fact": "1.5 ATA is about the pressure you'd feel 5 metres under the sea",
+  "price": ""
+ },
+ {
+  "date": "2026-11-10",
+  "slug": "neuradiant-1070",
+  "hook": "Light your eyes can't see.",
+  "fact": "Human eyes see light from about 400 to 700nm; 1070nm sits well beyond red",
+  "price": ""
+ },
+ {
+  "date": "2026-11-11",
+  "slug": "therabody-jetboots-pro-plus",
+  "hook": "No hoses. No pump box.",
+  "fact": "Most compression boots run off a separate pump box, connected by air hoses",
+  "price": "$1,499"
+ },
+ {
+  "date": "2026-11-13",
+  "slug": "theragun-pro-plus",
+  "hook": "It's not just speed. It's stroke.",
+  "fact": "Amplitude is how far a massage gun's head travels with every pulse",
+  "price": "$949"
+ },
+ {
+  "date": "2026-11-14",
+  "slug": "rapid-release-pro3",
+  "hook": "Who looks after the therapist's hands?",
+  "fact": "Hands-on soft tissue work puts repeated load through a therapist's hands and wrists",
+  "price": ""
+ },
+ {
+  "date": "2026-11-15",
+  "slug": "thermapparel-rallywrap",
+  "hook": "Why sweat stops working on muggy days.",
+  "fact": "Sweat only cools you when it evaporates; in humid air it drips instead",
+  "price": "$785"
+ }
 ]
