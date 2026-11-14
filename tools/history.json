@@ -152,5 +152,12 @@
   "hook": "Why sweat stops working on muggy days.",
   "fact": "Sweat only cools you when it evaporates; in humid air it drips instead",
   "price": "$785"
+ },
+ {
+  "date": "2026-11-16",
+  "slug": "oak-sleep-hub-2",
+  "hook": "Why hot nights feel so restless.",
+  "fact": "Your core body temperature naturally dips as you drift off to sleep",
+  "price": "$1,299"
  }
 ]
