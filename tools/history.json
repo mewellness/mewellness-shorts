@@ -159,5 +159,12 @@
   "hook": "Why hot nights feel so restless.",
   "fact": "Your core body temperature naturally dips as you drift off to sleep",
   "price": "$1,299"
+ },
+ {
+  "date": "2026-11-17",
+  "slug": "neuronic-light",
+  "hook": "Why a helmet, not a panel?",
+  "fact": "Light spreads out as it travels, so it gets weaker the further it has to go",
+  "price": ""
  }
 ]
