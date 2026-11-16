@@ -166,5 +166,12 @@
   "hook": "Why a helmet, not a panel?",
   "fact": "Light spreads out as it travels, so it gets weaker the further it has to go",
   "price": ""
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "powerbreathe-k4",
+  "hook": "About 20,000 breaths a day.",
+  "fact": "You take roughly 20,000 breaths a day, and your diaphragm powers most of them",
+  "price": "$1,127.50"
  }
 ]
