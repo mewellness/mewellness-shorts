@@ -52,7 +52,7 @@
     "date": "2026-10-28",
     "slug": "thermapparel-rallywrap",
     "hook": "Why cool beats icy.",
-    "fact": "These PCM packs freeze at around 15°C, not 0°C like ice",
+    "fact": "These PCM packs freeze at around 15\u00b0C, not 0\u00b0C like ice",
     "price": "$785"
   },
   {
@@ -179,6 +179,13 @@
     "slug": "oxyrevo-quest30",
     "hook": "What does the 30 in Quest30 mean?",
     "fact": "30 inches is about 76 cm, the chamber's width",
+    "price": ""
+  },
+  {
+    "date": "2026-11-20",
+    "slug": "marodyne-liv",
+    "hook": "Your skeleton is always being rebuilt.",
+    "fact": "Bone is constantly renewed; your skeleton is largely replaced about every 10 years",
     "price": ""
   }
 ]
