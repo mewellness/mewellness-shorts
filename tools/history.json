@@ -187,5 +187,12 @@
     "hook": "Your skeleton is always being rebuilt.",
     "fact": "Bone is constantly renewed; your skeleton is largely replaced about every 10 years",
     "price": ""
+  },
+  {
+    "date": "2026-11-22",
+    "slug": "oska-pulse",
+    "hook": "What makes a compass point north?",
+    "fact": "Earth has a magnetic field; it's what turns a compass needle north",
+    "price": "$1,395"
   }
 ]
