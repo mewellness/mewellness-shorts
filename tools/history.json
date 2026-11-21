@@ -194,5 +194,12 @@
     "hook": "What makes a compass point north?",
     "fact": "Earth has a magnetic field; it's what turns a compass needle north",
     "price": "$1,395"
+  },
+  {
+    "date": "2026-11-23",
+    "slug": "oxyrevo-quest36",
+    "hook": "Why do your ears pop on a plane?",
+    "fact": "Ears pop when the air pressure around you changes, like on a plane's descent",
+    "price": ""
   }
 ]
