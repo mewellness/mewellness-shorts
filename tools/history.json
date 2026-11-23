@@ -208,5 +208,12 @@
   "hook": "Why are sunsets red?",
   "fact": "Red light has longer wavelengths, so it scatters less and travels further through the air",
   "price": ""
+ },
+ {
+  "date": "2026-11-25",
+  "slug": "oxyrevo-apex36",
+  "hook": "Why are pressure tanks always round?",
+  "fact": "Curved walls spread pressure evenly, so there are no weak corners",
+  "price": ""
  }
 ]
