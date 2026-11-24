@@ -52,7 +52,7 @@
   "date": "2026-10-28",
   "slug": "thermapparel-rallywrap",
   "hook": "Why cool beats icy.",
-  "fact": "These PCM packs freeze at around 15°C, not 0°C like ice",
+  "fact": "These PCM packs freeze at around 15\u00b0C, not 0\u00b0C like ice",
   "price": "$785"
  },
  {
@@ -214,6 +214,13 @@
   "slug": "oxyrevo-apex36",
   "hook": "Why are pressure tanks always round?",
   "fact": "Curved walls spread pressure evenly, so there are no weak corners",
+  "price": ""
+ },
+ {
+  "date": "2026-11-26",
+  "slug": "neuradiant-1070",
+  "hook": "What does Hz actually mean?",
+  "fact": "One hertz means once per second; Australian mains power alternates at 50 Hz",
   "price": ""
  }
 ]
