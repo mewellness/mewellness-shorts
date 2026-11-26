@@ -229,5 +229,12 @@
   "hook": "Why squeeze toothpaste from the bottom?",
   "fact": "Squeezing in order from one end moves everything the same way; squeezing the middle pushes both ways",
   "price": "$1,499"
+ },
+ {
+  "date": "2026-11-28",
+  "slug": "theragun-pro-plus",
+  "hook": "Why do builders use a hammer drill?",
+  "fact": "A hammer drill adds rapid blows to the spin, so rhythm does the work rather than pushing harder",
+  "price": "$949"
  }
 ]
